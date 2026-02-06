@@ -6,7 +6,7 @@ const CUSTOM_TEXT = {
     "You're sweet, fun, and you make everything feel lighter.",
   note: "P.S. You look extra iconic in pink. 🌸",
   overlayTitle: "Yami said YES?! 💗✨",
-  overlayBody: "You just made my whole day.\nHappy Valentine’s Day, Yami 🌸"
+  overlayBody: "You just made my whole day.\nHappy Valentine's Day, Yami 🌸"
 };
   
   // ====== Elements ======
