@@ -512,3 +512,102 @@
     .sticker{ transition:none !important; }
   }
   
+  /* ===== S23+ (and similar) tuning ===== */
+@media (max-width: 420px){
+
+  /* Allow breathing room */
+  body{
+    overflow: auto;
+  }
+
+  .scene{
+    padding: 12px;
+  }
+
+  /* Let the desk expand instead of forcing everything into 84vh */
+  .desk{
+    height: auto;
+    min-height: 92vh;
+    overflow: visible;
+    padding-bottom: 16px;
+  }
+
+  /* Keep the drifting background behind while you scroll */
+  .drift-layer{
+    position: fixed;
+    inset: 0;
+  }
+
+  /* Header: smaller + tighter */
+  .header{
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    gap: 10px;
+  }
+  .brand{
+    padding: 8px 10px;
+    border-radius: 14px;
+  }
+  .brand .title{ font-size: 15px; }
+  .brand .sub{ font-size: 12px; }
+
+  /* Give the card maximum width */
+  .card-wrap{
+    inset: 78px 10px 66px 10px;
+  }
+  .card-stage{
+    width: 96vw;
+    height: 56vh; /* balance: still big, but leaves room for stickers/footer */
+  }
+
+  /* Inside of the card: stack panels */
+  .back{
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px;
+  }
+  .panel{
+    padding: 12px;
+    border-radius: 16px;
+  }
+  .panel h3{ font-size: 12px; }
+
+  /* Photo panel: slightly shorter */
+  .photo{
+    min-height: 140px;
+  }
+
+  /* Stickers: smaller + positioned away from the card */
+  .sticker{
+    width: 44vw;
+    border-radius: 22px;
+  }
+  .sticker.left{
+    left: 10px;
+    bottom: 10px;
+    top: auto;
+  }
+  .sticker.right{
+    right: 10px;
+    top: 88px;     /* below header */
+    bottom: auto;
+  }
+  .sticker .label{
+    font-size: 11px;
+  }
+  .sticker .label span{
+    padding: 5px 8px;
+  }
+
+  /* Footer pill: smaller */
+  .footer{
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+  .footer .pill{
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+}

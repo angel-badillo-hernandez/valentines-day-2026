@@ -112,6 +112,8 @@ const CUSTOM_TEXT = {
   // ====== Parallax for big PNG stickers ======
   const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
   
+  const isTouch = window.matchMedia("(pointer: coarse)").matches;
+
   function onMove(clientX, clientY){
     const r = desk.getBoundingClientRect();
     const x = (clientX - r.left) / r.width;
@@ -120,8 +122,8 @@ const CUSTOM_TEXT = {
     const dx = (x - 0.5);
     const dy = (y - 0.5);
   
-    const leftMax = 14;
-    const rightMax = 18;
+    const leftMax = isTouch ? 8 : 14;
+    const rightMax = isTouch ? 10 : 18;
   
     const ltx = clamp(dx * leftMax, -leftMax, leftMax);
     const lty = clamp(dy * leftMax, -leftMax, leftMax);
@@ -132,6 +134,7 @@ const CUSTOM_TEXT = {
     stickerLeft.style.transform  = `translate3d(${ltx}px, ${lty}px, 0) rotate(${ltx * 0.15}deg)`;
     stickerRight.style.transform = `translate3d(${rtx}px, ${rty}px, 0) rotate(${rtx * 0.12}deg)`;
   }
+  
   
   window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY), { passive:true });
   window.addEventListener("touchmove", (e) => {
