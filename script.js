@@ -1,13 +1,13 @@
 // ====== Quick customization ======
 const CUSTOM_TEXT = {
-    headline: "Hey Yami 💗",
-    message:
-      "I made you a little crafted-world Valentine because you’re genuinely one of my favorite people. " +
-      "You’re cute, fun, and you make everything feel lighter.",
-    note: "P.S. You look extra iconic in pink. 🌸",
-    overlayTitle: "Yami said YES?! 💗✨",
-    overlayBody: "You just made my whole day.\nHappy Valentine’s Day, Yami 🌸"
-  };
+  headline: "Hey Yami 💗",
+  message:
+    "I made you a virtual Valentine's Day card because you are genuinely a wonderful person. " +
+    "You're sweet, fun, and you make everything feel lighter.",
+  note: "P.S. You look extra iconic in pink. 🌸",
+  overlayTitle: "Yami said YES?! 💗✨",
+  overlayBody: "You just made my whole day.\nHappy Valentine’s Day, Yami 🌸"
+};
   
   // ====== Elements ======
   const desk = document.getElementById("desk");
@@ -197,6 +197,6 @@ const CUSTOM_TEXT = {
     };
     img.src = src;
   }
-  applyFallbackIfBroken(stickerLeft, "🍃");
+  applyFallbackIfBroken(stickerLeft, "💞");
   applyFallbackIfBroken(stickerRight, "🎮");
   
