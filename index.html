@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yami's Valentine's Day Card 💗</title>
+  <meta name="theme-color" content="#ff7fbf" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" type="image/png" href="./assets/icon16.png" />
+  <link rel="icon" type="image/png" href="./assets/icon32.png" />
+  <link rel="icon" type="image/png" href="./assets/icon96.png" />
+</head>
+
+<body>
+  <div class="scene" id="scene">
+    <div class="drift-layer" id="drift"></div>
+
+    <div class="desk" id="desk">
+      <div class="tape t1"></div>
+      <div class="tape t2"></div>
+
+      <div class="header">
+        <div class="brand">
+          <div class="title">Yami's Valentine's Day Card 💗</div>
+          <div class="sub">A virtual card — click to open</div>
+        </div>
+        <div class="hint">
+          Tip: Move your mouse around ✨<br/>
+          The stickers wiggle a little like a "live wallpaper."
+        </div>
+      </div>
+
+      <!-- BIG PARALLAX STICKERS -->
+      <div class="sticker left" id="stickerLeft" style="--img: url('./assets/yami-fave-1.png');">
+        <div class="img" aria-hidden="true"></div>
+        <div class="label"><span>Sabrina Carpenter</span><span>💗</span></div>
+      </div>
+
+      <div class="sticker right" id="stickerRight" style="--img: url('./assets/yami-fave-2.png');">
+        <div class="img" aria-hidden="true"></div>
+        <div class="label"><span>Nobara Kugisaki</span><span>✨</span></div>
+      </div>
+
+      <!-- CARD -->
+      <div class="card-wrap">
+        <div class="card-stage">
+          <div class="bifold" id="card" role="button" aria-label="Open valentine card" tabindex="0">
+            <!-- FRONT -->
+            <div class="side front">
+              <div class="cover">
+                <div class="to">To: Yami 💗</div>
+                <div class="from">From: Angel 💗</div>
+                <div class="tiny">Click to open</div>
+                <div class="seal" title="sealed with love"></div>
+              </div>
+            </div>
+
+            <!-- INSIDE -->
+            <div class="side back">
+              <!-- LEFT INSIDE: PNG placeholder -->
+              <div class="panel photo-panel">
+                <h3>For Yami</h3>
+
+                <!-- Replace this PNG with whatever collage/art you want -->
+                <div class="photo" id="insideLeftPhoto" style="--photo: url('./assets/inside-left.png');">
+                  <div class="photo-img" aria-hidden="true"></div>
+                </div>
+
+                <div class="caption">crafted with admiration 💗</div>
+              </div>
+
+              <!-- RIGHT INSIDE: message -->
+              <div class="panel message">
+                <h3>Message</h3>
+                <p class="big" id="headline">Hey Yami 💗</p>
+                <p class="p" id="msg">
+                  I made you a virtual Valentine's Day card because you are genuinely a wonderful person.
+                  You're sweet, fun, and you make everything feel lighter.
+                </p>
+                <div class="cta">
+                  <button class="yes" id="yesBtn" type="button">Be my Valentine? 💗</button>
+                  <button class="no" id="noBtn" type="button" title="(it's okay 😅)">Not yet</button>
+                </div>
+                <div class="note" id="note">P.S. You look extra iconic in pink. 🌸</div>
+              </div>
+
+              <div class="confetti" id="confetti" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="pill">Click the card • Move your mouse 💗</div>
+      </div>
+
+      <div class="overlay" id="overlay" aria-hidden="true">
+        <div class="popcard">
+          <h2>Yami said YES?! 💗✨</h2>
+          <p>You just made my whole day. Happy Valentine’s Day, Yami 🌸</p>
+          <button class="close" id="closeOverlay" type="button">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
