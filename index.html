@@ -57,13 +57,13 @@
 
             <!-- INSIDE -->
             <div class="side back">
-              <!-- LEFT INSIDE: PNG placeholder -->
+              <!-- LEFT INSIDE: PNG placeholder (tap to expand) -->
               <div class="panel photo-panel">
                 <h3>For Yami</h3>
 
-                <!-- Replace this PNG with whatever collage/art you want -->
-                <div class="photo" id="insideLeftPhoto" style="--photo: url('./assets/inside-left.png');">
+                <div class="photo" id="insideLeftPhoto" style="--photo: url('./assets/inside-left.png');" role="button" tabindex="0" aria-label="Expand image">
                   <div class="photo-img" aria-hidden="true"></div>
+                  <div class="tap-hint">Tap to expand</div>
                 </div>
 
                 <div class="caption">crafted with admiration 💗</div>
@@ -92,6 +92,15 @@
 
       <div class="footer">
         <div class="pill">Click the card • Move your mouse 💗</div>
+      </div>
+
+      <!-- Image Lightbox Overlay -->
+      <div class="img-overlay" id="imgOverlay" aria-hidden="true">
+        <div class="img-modal" role="dialog" aria-label="Expanded image">
+          <button class="img-close" id="imgClose" type="button" aria-label="Close expanded image">✕</button>
+          <img id="imgOverlayEl" alt="Expanded card image" />
+          <div class="img-tip">Tap outside to close</div>
+        </div>
       </div>
 
       <div class="overlay" id="overlay" aria-hidden="true">
